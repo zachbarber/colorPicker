@@ -13,8 +13,9 @@ const timeout = () => {
                 const blue = getRandomNum();
                 document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
                 currentColor.style.color = `rgb(${red}, ${green}, ${blue})`
-                currentColor.textContent = `rgb(${red}, ${green}, ${blue})`
-
+                currentColor.textContent = `RED (${red})`
+                currentColor.textContent += `\r\nGREEN (${green})`
+                currentColor.textContent += `\r\nBLUE (${blue})\r\n`
                 if (red * 0.299 + green * 0.587 + blue * 0.114 > 186) {
                     document.getElementById('currentColor').style.color = '#000000';
                 } else {
